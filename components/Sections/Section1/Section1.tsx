@@ -21,8 +21,8 @@ export default function Section1() {
             Write a punching line here
           </p>
           <p className="text-neutral-600 text-xl text-center mx-20 md:mx-6 my-8">
-            So users will engage with your site and convert. Something like
-            "Stop wasting time. Use this temaplate."
+            {`So users will engage with your site and convert. Something like
+            "Stop wasting time. Use this temaplate."`}
           </p>
           <Button>
             Get this temaplate <ArrowRight className="h-4 w-4 ml-2" />
