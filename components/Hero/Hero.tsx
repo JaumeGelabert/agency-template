@@ -3,6 +3,8 @@ import { Button } from "../ui/button";
 import HeroPill from "./HeroPill";
 import BackgroundSquares from "../Backgrounds/BackgroundSquares";
 import HeroCarousel from "./HeroCarousel";
+import Link from "next/link";
+import { config } from "@/lib/config";
 
 export default function Hero() {
   return (
@@ -17,10 +19,12 @@ export default function Hero() {
             Increase your development speed. Customize it and make it yours.
           </h2>
         </div>
-        <Button size="lg" className="mt-6 text-md">
-          Get this template
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Button>
+        <Link href={config.links.repo}>
+          <Button size="lg" className="mt-6 text-md">
+            Get this template
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+        </Link>
         <HeroCarousel />
       </div>
       {/* Background */}

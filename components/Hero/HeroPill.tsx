@@ -1,3 +1,4 @@
+import { config } from "@/lib/config";
 import { ArrowRight, Twitter } from "lucide-react";
 import Link from "next/link";
 
@@ -5,7 +6,7 @@ export default function HeroPill() {
   return (
     <div className="bg-blue-100 hover:shadow transition-all w-fit rounded-full">
       <Link
-        href="https://twitter.com/jaume_0to1"
+        href={config.links.x}
         target="_blank"
         className="flex flex-row justify-start items-center w-fit p-[3px] gap-1"
       >

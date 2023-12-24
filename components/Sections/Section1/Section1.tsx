@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { dataLeft, dataRight } from "./data";
+import Link from "next/link";
+import { config } from "@/lib/config";
 
 export default function Section1() {
   return (
@@ -24,9 +26,11 @@ export default function Section1() {
             {`So users will engage with your site and convert. Something like
             "Stop wasting time. Use this temaplate."`}
           </p>
-          <Button>
-            Get this temaplate <ArrowRight className="h-4 w-4 ml-2" />
-          </Button>
+          <Link href={config.links.repo}>
+            <Button>
+              Get this temaplate <ArrowRight className="h-4 w-4 ml-2" />
+            </Button>
+          </Link>
         </div>
         <div className="col-span-2 text-center md:h-[500px] flex md:flex-col justify-center gap-10 md:gap-0 md:justify-around items-center mt-6 md:mt-0">
           {dataRight.map(({ src, alt }, index) => (

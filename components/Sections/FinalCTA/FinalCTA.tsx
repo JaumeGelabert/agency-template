@@ -1,12 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { config } from "@/lib/config";
 import Link from "next/link";
 import { Tweet } from "react-tweet";
 
-const tweets = [
-  "1728096885783552256",
-  "1723490289271046320",
-  "1732180484887626112"
-];
 
 export default function FinalCTA() {
   return (
@@ -19,7 +15,7 @@ export default function FinalCTA() {
           I mainly tweet about Software Development and my way to create a
           Software Studio.
         </p>
-        <Link href="https://twitter.com/jaume_0to1">
+        <Link href={config.links.x}>
           <Button size="lg">
             <p>Follow me on</p>
             <p className="ml-2">𝕏</p>
@@ -27,7 +23,7 @@ export default function FinalCTA() {
         </Link>
       </div>
       <div className="flex flex-col md:flex-row justify-center md:gap-10 items-start mx-6">
-        {tweets.map((tweetId, index) => (
+        {config.tweets.map((tweetId, index) => (
           <Tweet key={index} id={tweetId} />
         ))}
       </div>

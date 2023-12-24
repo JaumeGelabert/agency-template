@@ -1,6 +1,7 @@
 import Link from "next/link";
 import FooterColumn from "./FooterColumn";
 import { data } from "./data";
+import { config } from "@/lib/config";
 
 export default function Footer() {
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
       <p className="text-sm text-neutral-500 mb-4">
         Made by{" "}
         <Link
-          href="https://twitter.com/jaume_0to1"
+          href={config.links.x}
           className="text-black hover:text-blue-500 transition-all font-medium"
         >
           @Jaume_0to1
